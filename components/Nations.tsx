@@ -15,18 +15,28 @@ const nations = [
     population: "100 000 habitants",
     description: "La dernière grande nation de l'Alliance. L'Impératrice de Narset tient le monde entre ses mains de pierre.",
     character: "Puissant · Militaire · Politique",
-    gradient: "linear-gradient(135deg, #1a1a3e 0%, #2d2d6b 50%, #1a1a3e 100%)",
-    accent: "#4A4AFF",
+    gradient: "linear-gradient(135deg, #1a0a0a 0%, #3d1010 50%, #1a0a0a 100%)",
+    accent: "#FFB84A",
     href: "/https://sites.google.com/view/asdorath",
   },
   {
     name: "Arcabios",
-    type: "Royaume",
+    type: "Royaume épéiste",
     population: "50 000 habitants",
     description: "Fondé par un maître épéiste sur les ruines de Toundra. Connu pour sa bibliothèque légendaire et son académie.",
     character: "Erudit · Guerrier · Ordonné",
-    gradient: "linear-gradient(135deg, #1a2e1a 0%, #2d5a2d 50%, #1a2e1a 100%)",
-    accent: "#4AFF6B",
+    gradient: "linear-gradient(135deg, #1a0a0a 0%, #3d1010 50%, #1a0a0a 100%)",
+      accent: "#cecccc",
+    href: "/nations",
+  },
+  {
+    name: "Dakurodo",
+    type: "Royaume sombre",
+    population: "70 000 habitants",
+    description: "Les pires démons et nécromanciens y règnent. La reine soulève une armée. Le monde retient son souffle.",
+    character: "Sombre · Interdit · Menaçant",
+    gradient: "linear-gradient(135deg, #393a3b 0%, #202122 50%, #393a3b 100%)",
+    accent: "#FF4A4A",
     href: "/nations",
   },
   {
@@ -40,13 +50,13 @@ const nations = [
     href: "/nations",
   },
   {
-    name: "Dakurodo",
-    type: "Royaume sombre",
-    population: "70 000 habitants",
-    description: "Les pires démons et nécromanciens y règnent. La reine soulève une armée. Le monde retient son souffle.",
-    character: "Sombre · Interdit · Menaçant",
-    gradient: "linear-gradient(135deg, #1a0a0a 0%, #3d1010 50%, #1a0a0a 100%)",
-    accent: "#FF4A4A",
+    name: "Ipulos Tacderen",
+    type: "Royaume du fer",
+    population: "20 000 habitants",
+    description: "La nation du fer, lieu où tous les rêves, tant qu'ils contiennent des métaux, se voient réalisés.",
+    character: "Voleur · Forgeron · Menaçant",
+    gradient: "linear-gradient(135deg, #303130 0%, #696b69 50%, #303130 100%)",
+    accent: "#131311",
     href: "/nations",
   },
   {
@@ -65,8 +75,8 @@ const nations = [
     population: "75 000 habitants",
     description: "Havre de la magie du vent. Des îles flottantes au cœur de Dakurodo. Un peuple mystérieux que rien ne peut atteindre.",
     character: "Mystique · Aérien · Isolé",
-    gradient: "linear-gradient(135deg, #393a3b 0%, #202122 50%, #020103 100%)",
-    accent: "#7f7d81",
+    gradient: "linear-gradient(135deg, #949097 0%, #424446 50%, #949097 100%)",
+    accent: "#1c1c1d",
     href: "/nations",
   },
   {
@@ -76,7 +86,7 @@ const nations = [
     description: "Dirigé par le gobelin Thogdur d'une main de fer, le Royaume de Thogdur est l'un des plus fermés, interdit aux humains ou encore aux elfes.",
     character: "Fermé · Autoritaire · Esclavagiste",
     gradient: "linear-gradient(135deg, #1a2e1a 0%, #2d5a2d 50%, #1a2e1a 100%)",
-    accent: "#4AFF6B",
+    accent: "#dddab6",
     href: "/nations",
   },
 ]
@@ -94,7 +104,7 @@ export default function Nations() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <p className="eyebrow text-[#C9974A] mb-4">Choisissez votre allégeance</p>
+          <p className="eyebrow text-[#C9974A] mb-4">Choisis ton allégeance</p>
           <h2 className="font-cinzel font-bold text-section-title text-[#1A1A2E] mb-4">
             Les Nations d&apos;Izaria
           </h2>
