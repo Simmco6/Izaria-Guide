@@ -30,7 +30,7 @@ export default function StatsBar() {
         </div>
         <div className="mt-6 text-center">
           <p className="font-jost text-sm text-[#F0EDE8]/40 tracking-wide">
-            Communauté active · Roleplayers francophones · Univers en constante évolution
+            Prends toi aussi un rôle important dans une des nations et prends activement part au lore d'Izaria afin de le façonner!
           </p>
         </div>
       </div>

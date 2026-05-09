@@ -139,15 +139,15 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="hero-title font-cinzel font-bold text-hero text-[#F0EDE8] mb-6 leading-tight">
-          Bienvenue dans{" "}
+          Bienvenue sur{" "}
           <span className="text-gold-gradient">Izaria</span>
         </h1>
 
         {/* Subline */}
         <p className="hero-sub font-jost font-light text-[#F0EDE8]/80 text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
-          Un univers vivant. Des nations en guerre.
+          Un univers vivant, des nations en guerre,
           <br className="hidden sm:block" />
-          Des personnages qui t&apos;attendent.
+          des personnages qui t&apos;attendent.
         </p>
 
         {/* CTAs */}
@@ -169,7 +169,7 @@ export default function Hero() {
 
         {/* Year badge */}
         <div className="hero-ctas mt-12 font-eb-garamond italic text-[#F0EDE8]/40 text-sm">
-          Anno 9527 · Izaria vous attend
+          An 9527 - Créé en 2020
         </div>
       </div>
 

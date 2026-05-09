@@ -1,10 +1,10 @@
 const races = [
   { name: "Humain", emoji: "⚔️", description: "Polyvalent, ambitieux, le pilier des grandes nations." },
-  { name: "Elfe", emoji: "🌿", description: "Immortels et raffinés, héritiers d'une sagesse millénaire." },
-  { name: "Fae", emoji: "✨", description: "Êtres de magie pure, imprévisibles et puissants." },
+  { name: "Elfe", emoji: "🌿", description: "Raffinés, héritiers d'une sagesse millénaire." },
+  { name: "Fae", emoji: "✨", description: "Petis êtres de magie, imprévisibles et puissants." },
   { name: "Thérianthrope", emoji: "🐱", description: "Mi-homme, mi-animal, art même de la polyvalance." },
   { name: "Démon", emoji: "🔥", description: "Nés des abysses de Dakurodo, maîtres des arts sombres." },
-  { name: "Ange", emoji: "🕊️", description: "Envoyés divins, protecteurs des nations de lumière." },
+  { name: "Ange", emoji: "🕊️", description: "Humains ailés, protecteurs des nations de lumière." },
   { name: "Gobelin", emoji: "🌑", description: "Petits mais rusés, artisans et marchands redoutables." },
   { name: "Mort-vivant", emoji: "💀", description: "Mortels ayant vendu leur âme à l'art de la mort." },
 ]

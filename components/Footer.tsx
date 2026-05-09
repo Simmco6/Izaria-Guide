@@ -142,7 +142,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-jost text-xs text-[#9CA3AF]/40">
-            Izaria · Communauté RP depuis 2021 · Site en constante évolution
+            Izaria · Communauté RP depuis 2020 · Serveur en constante évolution
           </p>
           <a
             href="https://discord.gg/yDhFtnm2NR"

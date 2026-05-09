@@ -6,9 +6,9 @@ const features = [
         <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
       </svg>
     ),
-    title: "Un Univers Construit",
+    title: "Un univers construit",
     description:
-      "Des centaines de pages de lore — nations, races, pouvoirs, flore, faune — un monde cohérent et en évolution constante.",
+      "Des centaines de pages de lore sur les nations, races, pouvoirs, flore, faune pour créer un monde cohérent et en évolution constante.",
   },
   {
     icon: (
@@ -23,7 +23,7 @@ const features = [
         <path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z" />
       </svg>
     ),
-    title: "Des Personnages Vivants",
+    title: "Des personnages vivants",
     description:
       "Crée ta fiche de personnage, choisis ta nation, ta race, ta classe et plonge dans des intrigues politiques et guerrières.",
   },
@@ -36,7 +36,7 @@ const features = [
         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: "Une Communauté Active",
+    title: "Une communauté accueillante",
     description:
       "Un serveur Discord francophone, des events réguliers, des MJs disponibles et une communauté qui t'accueille.",
   },

@@ -18,18 +18,20 @@ const navLinks = [
     submenu: true,
     items: [
       { href: "/histoire", label: "Histoire", description: "Les chroniques d'Izaria depuis l'an 9188." },
-      { href: "/carte-du-monde", label: "Carte du Monde", description: "Explorez la géographie d'Izaria." },
-      { href: "/pouvoirs", label: "Pouvoirs", description: "Magie, arts de combat et dons divins." },
-      { href: "/astronomie", label: "Astronomie", description: "Les astres et constellations d'Izaria." },
+      { href: "/pouvoirs", label: "Pouvoirs", description: "La magie, arts de combat et malédictions." },
+      { href: "/astronomie", label: "Astronomie", description: "Les astres et constellations." },
+      { href: "/races-et-classes", label: "Races & Classes", description: "Les races et les classes." },
     ],
   },
   {
     label: "Nations",
-    href: "/nations",
-  },
-  {
-    label: "Races & Classes",
-    href: "/races-et-classes",
+    submenu: true,
+    items: [
+      { href: "/carte-du-monde", label: "Carte du Monde", description: "La géographie." },
+      { href: "/nations", label: "Nations", description: "Les 10 nations d'Izaria." },
+      { href: "/tribus-mitsuriennes", label: "Tribus Mitsuriennes", description: "Les tribus de Mitsurin." },
+      { href: "/guildes", label: "Guildes", description: "Les organisations et les groupes." }
+    ]
   },
   {
     label: "Lore",
@@ -45,10 +47,8 @@ const navLinks = [
     label: "Communauté",
     submenu: true,
     items: [
-      { href: "/guildes", label: "Guildes", description: "Les organisations actives." },
       { href: "/roles-importants", label: "Rôles importants", description: "MJ, Admin, Joueurs." },
-      { href: "/comment-rp", label: "Comment RP ?", description: "Guide du roleplay." },
-      { href: "/tribus-mitsuriennes", label: "Tribus Mitsuriennes", description: "Les tribus de Mitsurin." },
+      { href: "/comment-rp", label: "Comment RP ?", description: "Guide du roleplay." }
     ],
   },
 ]
@@ -128,7 +128,7 @@ export default function Navbar() {
                     <NavigationMenuItem key={i}>
                       <NavigationMenuLink asChild>
                         <a
-                          href={link.href}
+                          href={link.items?.[0]?.href || "#"}
                           className={cn(
                             "font-jost font-medium text-sm px-4 py-2 rounded-md transition-colors inline-flex items-center",
                             scrolled
@@ -215,7 +215,7 @@ export default function Navbar() {
                   ) : (
                     <a
                       key={i}
-                      href={link.href}
+                      href={link.items?.[0]?.href || "#"}
                       onClick={() => setMobileOpen(false)}
                       className="py-2 px-2 text-sm font-jost font-medium text-[#1A1A2E] hover:text-[#C9974A] transition-colors"
                     >
