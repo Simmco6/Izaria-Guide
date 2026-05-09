@@ -17,7 +17,7 @@ const nations = [
     character: "Puissant · Militaire · Politique",
     gradient: "linear-gradient(135deg, #1a0a0a 0%, #3d1010 50%, #1a0a0a 100%)",
     accent: "#FFB84A",
-    href: "/https://sites.google.com/view/asdorath",
+    href: "https://sites.google.com/view/asdorath",
   },
   {
     name: "Arcabios",
@@ -27,7 +27,7 @@ const nations = [
     character: "Erudit · Guerrier · Ordonné",
     gradient: "linear-gradient(135deg, #1a0a0a 0%, #3d1010 50%, #1a0a0a 100%)",
       accent: "#cecccc",
-    href: "/nations",
+    href: "https://sites.google.com/view/arcabios",
   },
   {
     name: "Dakurodo",
