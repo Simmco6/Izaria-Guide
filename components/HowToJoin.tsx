@@ -1,6 +1,17 @@
 const steps = [
   {
     number: "01",
+    title: "Rejoins Discord",
+    description: "Présente-toi sur le serveur, soumets ta fiche et attends la validation. Bienvenue dans Izaria !",
+    cta: { label: "Rejoindre Discord", href: "https://discord.gg/yDhFtnm2NR", external: true },
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+    ),
+  },
+  {
+    number: "02",
     title: "Explore l'univers",
     description: "Lis l'histoire d'Izaria, découvre les nations disponibles, les races jouables et le système de pouvoirs.",
     cta: { label: "Découvrir le lore", href: "/histoire" },
@@ -12,7 +23,7 @@ const steps = [
     ),
   },
   {
-    number: "02",
+    number: "03",
     title: "Crée ta fiche",
     description: "Suis le guide de création de personnage. Choisis ta nation, ta race, ta classe et donne vie à ton alter ego.",
     cta: { label: "Créer sa fiche", href: "/creation-dune-fiche" },
@@ -22,18 +33,7 @@ const steps = [
         <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
       </svg>
     ),
-  },
-  {
-    number: "03",
-    title: "Rejoins Discord",
-    description: "Présente-toi sur le serveur, soumets ta fiche et attends la validation. Bienvenue dans Izaria !",
-    cta: { label: "Rejoindre Discord", href: "https://discord.gg/yDhFtnm2NR", external: true },
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-      </svg>
-    ),
-  },
+  }
 ]
 
 export default function HowToJoin() {
@@ -89,10 +89,10 @@ export default function HowToJoin() {
                   rel={step.cta.external ? "noopener noreferrer" : undefined}
                   className={`font-jost text-sm font-medium px-6 py-2.5 rounded transition-all duration-200 ${
                     i === 1
-                      ? "bg-[#C9974A] text-white hover:bg-[#B8853A] hover:shadow-[0_0_20px_rgba(201,151,74,0.3)]"
+                      ? "border border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A1A2E] hover:text-[#F0EDE8]"
                       : i === 2
-                      ? "bg-[#5865F2] text-white hover:bg-[#4752C4]"
-                      : "border border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A1A2E] hover:text-[#F0EDE8]"
+                      ? "bg-[#C9974A] text-white hover:bg-[#B8853A] hover:shadow-[0_0_20px_rgba(201,151,74,0.3)]"
+                      : "bg-[#5865F2] text-white hover:bg-[#4752C4]"
                   }`}
                 >
                   {step.cta.label}
