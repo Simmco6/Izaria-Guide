@@ -337,17 +337,19 @@ export default function CarteClient() {
 
                   {/* Hint zoom */}
                   <div
-                    className="absolute top-2 right-2 flex items-center gap-1 rounded px-2 py-1 pointer-events-none"
+                    className="absolute top-2 right-2 flex items-center gap-1 rounded px-2 py-1"
                     style={{
                       background: "rgba(13,27,42,0.7)",
                       border: "1px solid rgba(255,255,255,0.1)",
                       backdropFilter: "blur(3px)",
                     }}
                   >
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#c9b99a" strokeWidth="2">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#c9b99a" strokeWidth="2" style={{ pointerEvents: "none" }}>
                       <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/>
                     </svg>
-                    <span className="font-jost text-[0.6rem] text-[#c9b99a]">Agrandir</span>
+                    <span className="font-jost text-[0.6rem] text-[#c9b99a]">
+                      <a href="https://drive.google.com/file/d/1nzV2dsEcCJcL7k-GJe98RwAcH-AQu2pL/view" rel="noopener noreferrer">Agrandir</a>
+                    </span>
                   </div>
                 </div>
               </div>
