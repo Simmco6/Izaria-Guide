@@ -254,7 +254,7 @@ function DesktopPanel({ event, visible }: { event: TimelineEvent; visible: boole
       <div
         className="text-[1rem] leading-[1.8] transition-all duration-300 delay-[140ms]"
         style={{
-          color: "rgba(240,237,232,0.78)",
+          color: "#f0ede8",
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(7px)",
         }}
@@ -275,8 +275,8 @@ function DesktopPanel({ event, visible }: { event: TimelineEvent; visible: boole
                 key={pill}
                 className="text-[11px] px-2.5 py-1 rounded-full border"
                 style={{
-                  background: "rgba(201,151,74,0.15)",
-                  borderColor: "rgba(201,151,74,0.25)",
+                  background: "#c9974a26",
+                  borderColor: "#c9974a40",
                   color: "#E8B96A",
                 }}
               >

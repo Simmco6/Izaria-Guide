@@ -207,6 +207,11 @@ export default function Histoire() {
       {/* Frise chronologique */}
       <div className="bg-[#EFF4FB] py-12 px-4 border-b border-[#D4C5A9]/50">
         <div className="max-w-5xl mx-auto">
+          <div className="hidden md:flex items-center gap-6 mb-8">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#D4C5A9]" />
+            <p className="font-cinzel font-bold text-[#C9974A] text-xl tracking-widest uppercase whitespace-nowrap">Frise chronologique</p>
+            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#D4C5A9]" />
+          </div>
           <Frise />
           <p className="font-jost text-xs text-[#4A5568]/60 text-center mt-3">
             Naviguez dans la frise avec les flèches ou le clavier ← →
