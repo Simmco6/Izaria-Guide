@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import ScrollRevealProvider from "@/components/ScrollRevealProvider"
+import Frise from "@/components/Frise"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -144,7 +145,7 @@ const nations = [
     name: "Thogdur",
     accent: "#44a053",
     text: "L'ancien royaume de Saltir s'est retrouvé sans dirigeant du jour au lendemain. C'était sans compter sur un gobelin nommé Thogdur. Le roi penseur créa de presque rien une nation interdite aux humains et elfes. Entre esclavage, pillage et massacre, le nouveau roi ne chôme pas.",
-  }
+  },
 ]
 
 export default function Histoire() {
@@ -166,7 +167,6 @@ export default function Histoire() {
             backgroundImage: `radial-gradient(ellipse at 30% 60%, rgba(201,151,74,0.3) 0%, transparent 55%), radial-gradient(ellipse at 75% 25%, rgba(139,111,71,0.2) 0%, transparent 45%)`,
           }}
         />
-        {/* Grain */}
         <div
           className="absolute inset-0 opacity-30"
           style={{
@@ -177,7 +177,10 @@ export default function Histoire() {
 
         <div className="relative z-10 text-center px-4 pt-24 pb-16">
           <p className="eyebrow text-[#C9974A] mb-4">Chroniques d&apos;Izaria</p>
-          <h1 className="font-cinzel font-bold text-[#F0EDE8] mb-4" style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1.1 }}>
+          <h1
+            className="font-cinzel font-bold text-[#F0EDE8] mb-4"
+            style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1.1 }}
+          >
             Histoire du Monde
           </h1>
           <p className="font-eb-garamond italic text-[#F0EDE8]/60 text-lg max-w-xl mx-auto">
@@ -204,26 +207,9 @@ export default function Histoire() {
       {/* Frise chronologique */}
       <div className="bg-[#EFF4FB] py-12 px-4 border-b border-[#D4C5A9]/50">
         <div className="max-w-5xl mx-auto">
-          <div className="relative rounded-lg overflow-hidden bg-[#F8FAFD] border border-[#D4C5A9]" style={{ minHeight: "200px" }}>
-            {/* Remplace le src par ton image */}
-            <a
-              href="https://drive.google.com/file/d/1xdPdRSHsnqJg_saL2sBNxT_8OqDIf_t1/view"
-              rel="noopener noreferrer"
-            >
-            <img
-              src="/frise-chronologique.jpg"
-              alt="Frise chronologique d'Izaria"
-              className="w-full h-auto object-contain"
-            />
-            </a>
-            {/* Placeholder si pas encore d'image */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-[#F8FAFD]" style={{ display: "none" }}>
-              <p className="eyebrow text-[#C9974A] mb-2">Frise chronologique</p>
-              <p className="font-eb-garamond italic text-[#4A5568]">An 9188 — An 9527</p>
-            </div>
-          </div>
+          <Frise />
           <p className="font-jost text-xs text-[#4A5568]/60 text-center mt-3">
-            Un agrandissement de la frise est disponible en cliquant dessus.
+            Naviguez dans la frise avec les flèches ou le clavier ← →
           </p>
         </div>
       </div>
@@ -236,12 +222,21 @@ export default function Histoire() {
             id={chapter.id}
             className={`py-24 px-4 relative ${ci % 2 === 1 ? "bg-[#F8FAFD]" : "bg-[#EFF4FB]"}`}
           >
-            {/* Wave top for alternating sections */}
             {ci > 0 && (
               <div className="absolute top-0 left-0 right-0 overflow-hidden leading-none">
-                <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-10 block">
+                <svg
+                  viewBox="0 0 1440 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
+                  className="w-full h-10 block"
+                >
                   <path
-                    d={ci % 2 === 1 ? "M0,20 C480,40 960,0 1440,20 L1440,0 L0,0 Z" : "M0,10 C360,40 1080,0 1440,20 L1440,0 L0,0 Z"}
+                    d={
+                      ci % 2 === 1
+                        ? "M0,20 C480,40 960,0 1440,20 L1440,0 L0,0 Z"
+                        : "M0,10 C360,40 1080,0 1440,20 L1440,0 L0,0 Z"
+                    }
                     fill={ci % 2 === 1 ? "#EFF4FB" : "#F8FAFD"}
                   />
                 </svg>
@@ -252,27 +247,37 @@ export default function Histoire() {
               <div className="grid lg:grid-cols-[1fr_2fr] gap-16 items-start">
                 {/* Left — chapter header */}
                 <div className="reveal lg:sticky lg:top-36">
-                  {/* Chapter number */}
-                  <div className="font-cinzel font-bold text-[8rem] leading-none select-none" style={{ color: `${chapter.accent}10` }}>
+                  <div
+                    className="font-cinzel font-bold text-[8rem] leading-none select-none"
+                    style={{ color: `${chapter.accent}10` }}
+                  >
                     {String(ci + 1).padStart(2, "0")}
                   </div>
                   <div className="mt-[-3rem]">
                     <p className="eyebrow mb-2" style={{ color: chapter.accent }}>
                       {chapter.label}
                     </p>
-                    <h2 className="font-cinzel font-bold text-[#1A1A2E] mb-3" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", lineHeight: 1.2 }}>
+                    <h2
+                      className="font-cinzel font-bold text-[#1A1A2E] mb-3"
+                      style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", lineHeight: 1.2 }}
+                    >
                       {chapter.title}
                     </h2>
-                    {/* Year badge */}
                     <div
                       className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-jost"
-                      style={{ borderColor: `${chapter.accent}40`, color: chapter.accent, background: `${chapter.accent}10` }}
+                      style={{
+                        borderColor: `${chapter.accent}40`,
+                        color: chapter.accent,
+                        background: `${chapter.accent}10`,
+                      }}
                     >
-                      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: chapter.accent }} />
+                      <span
+                        className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                        style={{ background: chapter.accent }}
+                      />
                       {chapter.year}
                     </div>
                   </div>
-                  {/* Decorative vertical line */}
                   <div className="hidden lg:block mt-8 ml-1 w-px h-24 bg-gradient-to-b from-[#D4C5A9] to-transparent" />
                 </div>
 
@@ -285,7 +290,10 @@ export default function Histoire() {
                         className="pl-5 border-l-[3px] py-1"
                         style={{ borderColor: chapter.accent }}
                       >
-                        <p className="font-eb-garamond italic text-xl leading-relaxed" style={{ color: chapter.accent }}>
+                        <p
+                          className="font-eb-garamond italic text-xl leading-relaxed"
+                          style={{ color: chapter.accent }}
+                        >
                           « {block.text} »
                         </p>
                       </blockquote>
@@ -301,24 +309,22 @@ export default function Histoire() {
           </section>
         ))}
 
-        {/* Nations section — inside "Aujourd'hui" */}
+        {/* Nations section */}
         <section className="bg-[#EFF4FB] pb-24 px-4">
           <div className="max-w-5xl mx-auto">
-
             <div className="grid md:grid-cols-2 gap-4">
               {nations.map((nation, i) => (
                 <div
                   key={nation.name}
                   className={`reveal reveal-delay-${Math.min((i % 4) + 1, 6)} group relative bg-white rounded-lg p-6 border border-[#D4C5A9]/50 hover:border-[#C9974A]/30 hover:shadow-md transition-all duration-200`}
                 >
-                  {/* Left accent bar */}
                   <div
                     className="absolute left-0 top-4 bottom-4 w-[3px] rounded-r-full"
                     style={{ background: nation.accent }}
                   />
                   <div className="pl-4">
                     <h3
-                      className="font-cinzel font-bold text-base mb-2 group-hover:transition-colors"
+                      className="font-cinzel font-bold text-base mb-2"
                       style={{ color: nation.accent }}
                     >
                       {nation.name}
