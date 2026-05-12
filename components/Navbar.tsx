@@ -48,7 +48,8 @@ const navLinks = [
     submenu: true,
     items: [
       { href: "/roles-importants", label: "Rôles importants", description: "MJ, Admin, Joueurs." },
-      { href: "/comment-rp", label: "Comment RP ?", description: "Guide du roleplay." }
+      { href: "/comment-rp", label: "Comment RP ?", description: "Guide du roleplay." },
+      { href: "/economie", label: "Économie", description: "L'économie et les prix des matériaux d'Izaria." }
     ],
   },
 ]

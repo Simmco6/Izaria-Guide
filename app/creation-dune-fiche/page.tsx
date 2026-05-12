@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import ScrollRevealProvider from "@/components/ScrollRevealProvider"
@@ -7,7 +8,16 @@ import { useState } from "react"
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
-const steps = [
+const steps: {
+  number: string
+  id: string
+  label: string
+  icon: string
+  title: string
+  color: string
+  description: string
+  items: { label: string; detail: React.ReactNode }[]
+}[] = [
   {
     number: "01",
     id: "identite",
@@ -20,9 +30,9 @@ const steps = [
       { label: "Nom & Prénom", detail: "Choisis un nom cohérent avec le monde médiéval-fantastique d'Izaria. Pas de noms modernes ni de références au monde réel." },
       { label: "Surnom", detail: "Facultatif. Un surnom peut enrichir l'identité de ton personnage, mais n'est pas obligatoire." },
       { label: "Sexe & Âge", detail: "Indique le sexe et l'âge de ton personnage. L'âge doit être cohérent avec sa race (ex: un elfe peut vivre plusieurs siècles)." },
-      { label: "Race", detail: "Consulte la liste complète des races disponibles dans le guide Races & Classes. Toutes les combinaisons race/classe sont possibles." },
-      { label: "Classe (métier)", detail: "Obligatoire ! C'est le métier de ton personnage. Pense au mood général : une brute → Guerrier/Mercenaire, un érudit → Mage/Sorcier." },
-      { label: "Nation de naissance", detail: "Obligatoire ! Elle doit être l'une des nations d'Izaria. Consulte le guide des Nations pour t'imprégner de l'atmosphère de chaque nation." },
+      { label: "Race", detail: <>Consulte la liste complète des races disponibles dans le guide <a href="/races-et-classes" className="text-[#C9974A] underline underline-offset-2 hover:opacity-80 transition-opacity">Races & Classes</a>. Toutes les combinaisons race/classe sont possibles.</> },
+      { label: "Classe (métier)", detail: <>Obligatoire ! C'est le métier de ton personnage. Pense au mood général : une brute → Guerrier/Mercenaire, un érudit → Mage/Sorcier. Consulte le guide <a href="/races-et-classes" className="text-[#C9974A] underline underline-offset-2 hover:opacity-80 transition-opacity">Races & Classes</a>.</> },
+      { label: "Nation de naissance", detail: <>Obligatoire ! Elle doit être l'une des nations d'Izaria. Consulte le guide des <a href="/nations" className="text-[#C9974A] underline underline-offset-2 hover:opacity-80 transition-opacity">Nations</a> pour t'imprégner de l'atmosphère de chaque nation.</> },
     ],
   },
   {
@@ -35,7 +45,7 @@ const steps = [
     description: "Le passé qui a forgé ton personnage, au minimum 20 lignes.",
     items: [
       { label: "Minimum 20 lignes", detail: "L'histoire doit faire au minimum 20 lignes sur les écrans du staff. C'est une exigence non négociable." },
-      { label: "Ancrage dans le lore", detail: "Inspire-toi de l'histoire de ta nation, des guerres, des renversements de pouvoir. Aucun lien possible avec le monde réel." },
+      { label: "Ancrage dans le lore", detail: <>Inspire-toi de l'<a href="/histoire" className="text-[#27AE60] underline underline-offset-2 hover:opacity-80 transition-opacity">histoire de ta nation</a>, des guerres, des renversements de pouvoir. Aucun lien possible avec le monde réel.</> },
       { label: "Cohérence avec la race", detail: "Si ton personnage est vampire, explique comment il l'est devenu. Si c'est un hybride, explique son hybridation. La race doit enrichir l'histoire." },
       { label: "Aucune création de lieux", detail: "Interdit de créer de nouveaux lieux ou de modifier/ajouter des événements aux histoires des nations existantes." },
     ],
@@ -63,8 +73,8 @@ const steps = [
     color: "#2980B9",
     description: "Un seul pouvoir, précisément décrit selon les 3 points requis.",
     items: [
-      { label: "Un seul pouvoir", detail: "Tu n'as droit qu'à un seul pouvoir. Consulte la page des Pouvoirs du guide pour choisir. L'idéal est de lier ton pouvoir à ta nation." },
-      { label: "3 points obligatoires", detail: "S'il manque l'un des 3 points requis (décrits dans la section Pouvoirs du guide), ta fiche sera automatiquement refusée. Sois exhaustif." },
+      { label: "Un seul pouvoir", detail: <>Tu n'as droit qu'à un seul pouvoir. Consulte la page des <a href="/pouvoirs" className="text-[#2980B9] underline underline-offset-2 hover:opacity-80 transition-opacity">Pouvoirs</a> du guide pour choisir. L'idéal est de lier ton pouvoir à ta nation.</> },
+      { label: "3 points obligatoires", detail: <>S'il manque l'un des 3 points requis (décrits dans la section <a href="/pouvoirs" className="text-[#2980B9] underline underline-offset-2 hover:opacity-80 transition-opacity">Pouvoirs</a> du guide), ta fiche sera automatiquement refusée. Sois exhaustif.</> },
       { label: "Invocation limitée", detail: "Si ton pouvoir est un sort d'invocation, une seule créature peut être invoquée à la fois." },
     ],
   },
@@ -78,7 +88,7 @@ const steps = [
     description: "Ce que ton personnage porte au combat avec ses limites.",
     items: [
       { label: "1 ou 2 armes maximum", detail: "Tu peux choisir une ou deux armes. Pas d'armes à feu, pas d'arbalètes, pas d'armes en os de dragon. L'avancement technologique est celui du XIIe-XIIIe siècle." },
-      { label: "Description & histoire", detail: "Décris chaque arme en détail : nom, type, taille, matériau (uniquement les métaux/bois/pierres listés dans Économie), caractéristiques et histoire de l'arme." },
+      { label: "Description & histoire", detail: <>Décris chaque arme en détail : nom, type, taille, matériau (uniquement les métaux/bois/pierres listés dans <a href="/economie" className="text-[#C0392B] underline underline-offset-2 hover:opacity-80 transition-opacity">Économie</a>), caractéristiques et histoire de l'arme.</> },
       { label: "Illustration de l'arme", detail: "Une illustration couleur de chaque arme est obligatoire. Elle doit être adaptée au monde d'Izaria (pas d'esthétique moderne ou anachronique)." },
     ],
   },
@@ -98,7 +108,7 @@ const steps = [
   },
 ]
 
-const rules = [
+const rules: { icon: string; text: React.ReactNode }[] = [
   { icon: "🚫", text: "Pas de langage SMS ni d'abréviations dans la fiche." },
   { icon: "⛪", text: "Aucun rapprochement au divin, à l'immortalité ou à un culte." },
   { icon: "📺", text: "Interdit de copier un personnage d'animé, série, film, livre ou jeu (y compris From Software)." },
@@ -107,7 +117,7 @@ const rules = [
   { icon: "🌍", text: "Aucun lien possible entre les fiches et le monde réel." },
   { icon: "📋", text: "3 fiches simultanées maximum par joueur sur le serveur." },
   { icon: "©️", text: "Toute copie de fiche, pouvoir ou capacité d'un autre rôliste est interdite sans son consentement." },
-  { icon: "🪨", text: "Seuls les métaux, bois et pierres listés dans Économie sont autorisés." },
+  { icon: "🪨", text: <>Seuls les métaux, bois et pierres listés dans <a href="/economie" className="text-[#C9974A] underline underline-offset-2 hover:opacity-80 transition-opacity">Économie</a> sont autorisés.</> },
   { icon: "🗺️", text: "Interdit de modifier le lore des nations ou de créer de nouveaux lieux." },
   { icon: "⚙️", text: "L'avancement technologique correspond au XIIe-XIIIe siècle." },
   { icon: "🇫🇷", text: "La seule langue autorisée dans les fiches est le français." },
@@ -335,34 +345,34 @@ export default function CreationFichePage() {
                   Les fautes d&apos;orthographe ne bloqueront pas la validation, mais le staff recommande d&apos;utiliser un correcteur.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                    <a
-                        href="https://docs.google.com/document/d/1TldX-cjC4TTD68u9TeYuZNnSuWiWWE5C95VQAnZXmNM/edit?tab=t.0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-jost font-semibold px-8 py-3.5 rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg"
-                        style={{
-                        background: "linear-gradient(135deg, #C9974A, #E8B96A)",
-                        color: "#0D1B2A",
-                        }}
-                    >
-                        📄 Utiliser le modèle
-                    </a>
-                    <a
-                        href="https://www.scribens.fr/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 font-jost text-base font-medium px-4 py-2 rounded-lg border border-[#D4C5A9] text-[#4A5568] hover:border-[#C9974A] hover:text-[#C9974A] transition-all"
-                    >
-                        🔤 Corriger sa fiche
-                    </a>
-                    <a
-                        href="https://discord.com/channels/693568556217925652/1054032960480874586"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 font-jost text-base font-medium px-4 py-2 rounded-lg border border-[#D4C5A9] text-[#4A5568] hover:border-[#C9974A] hover:text-[#C9974A] transition-all"
-                    >
-                        🗳️ Déposer sa fiche
-                    </a>
+                  <a
+                    href="https://docs.google.com/document/d/1TldX-cjC4TTD68u9TeYuZNnSuWiWWE5C95VQAnZXmNM/edit?tab=t.0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-jost font-semibold px-8 py-3.5 rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg"
+                    style={{
+                      background: "linear-gradient(135deg, #C9974A, #E8B96A)",
+                      color: "#0D1B2A",
+                    }}
+                  >
+                    📄 Utiliser le modèle
+                  </a>
+                  <a
+                    href="https://www.scribens.fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-jost text-base font-medium px-4 py-2 rounded-lg border border-[#D4C5A9] text-[#4A5568] hover:border-[#C9974A] hover:text-[#C9974A] transition-all"
+                  >
+                    🔤 Corriger sa fiche
+                  </a>
+                  <a
+                    href="https://discord.com/channels/693568556217925652/1054032960480874586"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-jost text-base font-medium px-4 py-2 rounded-lg border border-[#D4C5A9] text-[#4A5568] hover:border-[#C9974A] hover:text-[#C9974A] transition-all"
+                  >
+                    🗳️ Déposer sa fiche
+                  </a>
                 </div>
               </div>
             </div>
