@@ -362,8 +362,8 @@ export default function CarteClient() {
                   <p className="eyebrow text-[#C9974A] mb-3">À propos du monde</p>
                   <p className="font-eb-garamond italic text-[#4A5568] text-lg leading-relaxed mb-3">
                     Izaria est une planète qui abrite de nombreuses nations dont certaines que nous connaissons.
-                    La taille du monde connu est d&apos;environ <strong className="text-[#1A1A2E] not-italic">2&apos;200 km</strong> d&apos;est en ouest
-                    et d&apos;environ <strong className="text-[#1A1A2E] not-italic">5&apos;000 km</strong> du nord au sud.
+                    La taille du monde connu est d&apos;environ 2&apos;200 km  d&apos;est en ouest
+                    et d&apos;environ 5&apos;000 km du nord au sud.
                   </p>
                   <p className="font-jost text-sm text-[#4A5568]/70">
                     Survolez les nations sur la nouvelle carte pour les identifier. Cliquez sur une nation pour accéder à sa page, ou cliquez sur la carte pour l&apos;agrandir.
