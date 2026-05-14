@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import CarteClient from "./CarteClient"
+import CarteClient from "@/components/CarteClient"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import ScrollRevealProvider from "@/components/ScrollRevealProvider"
