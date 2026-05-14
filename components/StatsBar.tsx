@@ -1,7 +1,7 @@
 export default function StatsBar() {
   const stats = [
     { value: "10", label: "Nations" },
-    { value: "13+", label: "Races jouables" },
+    { value: "14+", label: "Races jouables" },
     { value: "15", label: "Classes jouables" },
     { value: "2020", label: "Depuis" }
   ]
