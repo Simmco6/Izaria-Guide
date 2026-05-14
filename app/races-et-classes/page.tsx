@@ -307,8 +307,8 @@ export default function RacesEtClassesPage() {
 
           {/* Gradient overlays */}
           <div className="absolute inset-0 z-10 pointer-events-none" aria-hidden>
-            {/* Heavy left vignette for text legibility */}
-            <div style={{
+            {/* Left vignette — desktop only */}
+            <div className="hidden md:block" style={{
               position: "absolute", inset: 0,
               background: `linear-gradient(100deg,
                 rgba(8,14,24,0.98) 0%,
@@ -317,14 +317,20 @@ export default function RacesEtClassesPage() {
                 rgba(8,14,24,0.12) 68%,
                 transparent 100%)`,
             }} />
-            {/* Bottom fade into thumbnail strip */}
-            <div style={{
+            {/* Bottom fade — desktop */}
+            <div className="hidden md:block" style={{
               position: "absolute", bottom: 0, left: 0, right: 0, height: "40%",
               background: "linear-gradient(to top, rgba(8,14,24,1) 0%, rgba(8,14,24,0.5) 60%, transparent 100%)",
             }} />
-            {/* Accent color atmosphere (right side glow) */}
+            {/* Bottom fade — mobile only, stronger to back the text panel */}
+            <div className="md:hidden" style={{
+              position: "absolute", bottom: 0, left: 0, right: 0, height: "75%",
+              background: "linear-gradient(to top, rgba(8,14,24,1) 0%, rgba(8,14,24,0.98) 45%, rgba(8,14,24,0.5) 70%, transparent 100%)",
+            }} />
+            {/* Accent glow — desktop only */}
             <div
               key={`glow-${displayIndex}`}
+              className="hidden md:block"
               style={{
                 position: "absolute", inset: 0,
                 background: `radial-gradient(ellipse 55% 75% at 72% 45%, rgba(${accentRgb},0.09) 0%, transparent 65%)`,
@@ -490,8 +496,8 @@ export default function RacesEtClassesPage() {
               {/* Animated content */}
               <div key={`info-m-${displayIndex}`} className={direction === "next" ? "anim-info-next" : "anim-info-prev"}>
 
-                {/* Counter + subtitle */}
-                <div className="flex items-center gap-2 mb-3 pt-6">
+                {/* Counter + subtitle — masqué mobile */}
+                <div className="hidden">
                   <span className="font-jost text-[0.58rem] font-bold tabular-nums tracking-[0.2em]" style={{ color: accent }}>
                     {String(displayIndex + 1).padStart(2, "0")}
                     <span style={{ color: `${accent}50`, margin: "0 3px" }}>/</span>
