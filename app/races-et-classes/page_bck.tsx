@@ -165,159 +165,6 @@ const races = [
   },
 ]
 
-const classes = [
-  {
-    slug: "guerrier2",
-    name: "Guerrier",
-    subtitle: "Maître du combat au corps à corps",
-    description: "La classe de guerrier se concentre sur la force physique et les compétences de combat au corps à corps. Il peut manier tous les types de lames et armes contondantes. Ses pouvoirs peuvent affaiblir l'adversaire ou assener des attaques de très haute intensité.",
-    main: "Affinité au combat au corps à corps",
-    secondary: "Affinité au combat singulier",
-    accent: "#C9974A",
-    accentRgb: "201,151,74",
-  },
-  {
-    slug: "mercenaire5",
-    name: "Mercenaire",
-    subtitle: "Le tueur à gages",
-    description: "La classe de mercenaire se concentre sur la traque d'une cible précise et des techniques pour réussir son contrat. De la manipulation aux compétences de combat au corps, guerrier très complet, il n'a pas de point fort à part celui de tuer n'importe qui tant qu'on lui donne le prix.",
-    main: "Affinité au combat au corps à corps",
-    secondary: "Affinité à la traque",
-    accent: "#A07850",
-    accentRgb: "160,120,80",
-  },
-  {
-    slug: "chasseur",
-    name: "Chasseur",
-    subtitle: "Maître de la nature",
-    description: "La classe de chasseur se concentre sur une connaissance poussée de la nature. Très souvent équipé de pièges et d'armes à distance, il préférera toujours les embuscades aux combats singuliers directs.",
-    main: "Affinité envers la faune et la flore",
-    secondary: "Affinité au dressage des animaux",
-    accent: "#6B8F5E",
-    accentRgb: "107,143,94",
-  },
-  {
-    slug: "assassin",
-    name: "Assassin",
-    subtitle: "Ombre et silence",
-    description: "La classe d'assassin se concentre sur la traque d'une cible précise mais en toute discrétion. Il excelle dans les compétences de camouflage afin de tuer sans que personne ne le sache.",
-    main: "Affinité à la traque",
-    secondary: "Affinité à la discrétion",
-    accent: "#4A4A6A",
-    accentRgb: "74,74,106",
-  },
-  {
-    slug: "samourai",
-    name: "Samouraï",
-    subtitle: "Lame rapide et précise",
-    description: "La classe de samouraï se concentre sur l'agilité et les compétences de combat à la lame. En armure légère, il est plus rapide qu'un guerrier lambda et à l'aise au tir à l'arc. Il adore les duels mais se fatigue vite si le combat s'éternise.",
-    main: "Affinité au combat singulier",
-    secondary: "Affinité au tir à l'arc",
-    accent: "#B85555",
-    accentRgb: "184,85,85",
-  },
-  {
-    slug: "voleur",
-    name: "Voleur",
-    subtitle: "Discret et insaisissable",
-    description: "La classe de voleur se concentre sur la discrétion et la dissimulation. Souvent sans armure ou en armure légère, il préférera attaquer par surprise si le combat est obligatoire. Néanmoins la fuite sera toujours sa première option.",
-    main: "Affinité à la discrétion",
-    secondary: "Affinité au crochetage",
-    accent: "#7A7A8C",
-    accentRgb: "122,122,140",
-  },
-  {
-    slug: "mage",
-    name: "Mage",
-    subtitle: "Tisserand des arcanes",
-    description: "La classe de mage se concentre sur la magie et l'illusionnisme. Un mage peut non seulement contrôler la magie mais aussi ressentir ses différentes utilisations et illusions.",
-    main: "Affinité à la magie",
-    secondary: "Affinité à l'illusionnisme",
-    accent: "#6B9AC9",
-    accentRgb: "107,154,201",
-  },
-  {
-    slug: "sorcier",
-    name: "Sorcier",
-    subtitle: "Maître des esprits et des potions",
-    description: "La classe de sorcier se concentre sur la fabrication de potions magiques et l'utilisation de la magie sous forme naturelle. Il peut communiquer avec les esprits et les animaux. Un sorcier est capable de créer le bien comme le mal.",
-    main: "Affinité à la création de potion",
-    secondary: "Affinité au shamanisme",
-    accent: "#9B7BB8",
-    accentRgb: "155,123,184",
-  },
-  {
-    slug: "paladin",
-    name: "Paladin",
-    subtitle: "Bouclier de ses alliés",
-    description: "La classe de paladin se concentre sur la défense de ses alliés. Vrai support, il fera tout pour que les attaques soient concentrées sur lui. À l'aise avec la magie blanche, il est capable de soigner ses alliés et est extrêmement résistant.",
-    main: "Affinité aux connaissances défensives en combat",
-    secondary: "Affinité à la magie de soins",
-    accent: "#D4AF37",
-    accentRgb: "212,175,55",
-  },
-  {
-    slug: "vagabond",
-    name: "Vagabond",
-    subtitle: "Plus rapide que son ombre",
-    description: "La classe de vagabond se concentre sur les déplacements très rapides. Vrai maître de l'agilité, il voudra jamais qu'un combat s'éternise. Sa rapidité et sa connaissance de l'environnement sont ses plus grandes forces pour finir le combat le plus vite possible.",
-    main: "Affinité à l'agilité",
-    secondary: "Affinité à la connaissance du terrain",
-    accent: "#A09070",
-    accentRgb: "160,144,112",
-  },
-  {
-    slug: "chasseur-de-demon",
-    name: "Chasseur de Démon",
-    subtitle: "Fléau de la magie noire",
-    description: "La classe de chasseur de démon se concentre sur le combat contre la magie noire. Il peut dans certains cas l'utiliser lui-même. Ce guerrier ne cherche qu'à détruire toute forme de malédiction et est capable d'utiliser certains sorts pour retarder les effets de la magie noire.",
-    main: "Affinité à la défense contre la magie noire",
-    secondary: "Affinité à briser des malédictions",
-    accent: "#C04040",
-    accentRgb: "192,64,64",
-  },
-  {
-    slug: "archer",
-    name: "Archer",
-    subtitle: "Précision mortelle",
-    description: "La classe d'archer se concentre sur une connaissance extrême des armes à distance. Des couteaux de lancer aux hachettes en passant par l'arc, il a une précision remarquable et peut poser des pièges pour stopper sa cible avant de lui asséner un coup fatal.",
-    main: "Affinité au combat à distance",
-    secondary: "Affinité au piégeage",
-    accent: "#7EB88A",
-    accentRgb: "126,184,138",
-  },
-  {
-    slug: "necromancien",
-    name: "Nécromancien",
-    subtitle: "Seigneur des morts",
-    description: "La classe de nécromancien se concentre sur la magie noire et les invocations. Il cherchera toujours à utiliser ses pouvoirs pour rendre le combat disproportionné en sa faveur. Mauvais en combat singulier, il sera mis en difficulté selon l'environnement.",
-    main: "Affinité à la magie noire",
-    secondary: "Affinité aux invocations",
-    accent: "#6B5B8A",
-    accentRgb: "107,91,138",
-  },
-  {
-    slug: "guerisseur",
-    name: "Guérisseur",
-    subtitle: "Vie et salut",
-    description: "La classe de guérisseur se concentre sur le soin magique ou non. Il fera toujours passer ses alliés avant lui sur un champ de bataille. Ses alliés sont sa plus grande force. Néanmoins, il peut être décisif si le combat s'éternise.",
-    main: "Affinité aux soins non magiques",
-    secondary: "Affinité à la magie blanche",
-    accent: "#E8D4A0",
-    accentRgb: "232,212,160",
-  },
-  {
-    slug: "marchand",
-    name: "Marchand",
-    subtitle: "L'argent est roi",
-    description: "La classe de marchand se concentre sur les aspects économiques. Ils feront tout pour éviter les combats directs mais peuvent engager guildes et mercenaires sans scrupule. Ils connaissent les failles économiques des royaumes et savent les exploiter.",
-    main: "Affinité à l'économie",
-    secondary: "Affinité à la négociation",
-    accent: "#C9974A",
-    accentRgb: "201,151,74",
-  },
-]
-
 // ─── Stat pill ─────────────────────────────────────────────────────────────────
 
 function StatPill({ label, value, accent }: { label: string; value: string; accent: string }) {
@@ -345,7 +192,7 @@ export default function RacesEtClassesPage() {
   const [displayIndex, setDisplayIndex] = useState(0)
   const [tab, setTab] = useState<"races" | "classes">("races")
 
-  const items = tab === "classes" ? classes : races
+  const items = races // swap based on tab later when classes exist
 
   const current = items[displayIndex]
   const accent = current.accent
@@ -448,7 +295,7 @@ export default function RacesEtClassesPage() {
             style={{ zIndex: 0 }}
           >
             <Image
-              src={`/${tab === "classes" ? "classes" : "races"}/${current.slug}.png`}
+              src={`/races/${current.slug}.png`}
               alt={current.name}
               fill
               sizes="100vw"
@@ -566,21 +413,11 @@ export default function RacesEtClassesPage() {
                     boxShadow: `0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(${accentRgb},0.1)`,
                   }}
                 >
-                  {tab === "classes" ? (
-                    <>
-                      <StatPill label="Principale" value={(current as typeof classes[0]).main} accent={accent} />
-                      <div className="w-px self-stretch" style={{ background: `rgba(${accentRgb},0.15)` }} />
-                      <StatPill label="Secondaire" value={(current as typeof classes[0]).secondary} accent={accent} />
-                    </>
-                  ) : (
-                    <>
-                      <StatPill label="Longévité" value={(current as typeof races[0]).lifespan} accent={accent} />
-                      <div className="w-px self-stretch" style={{ background: `rgba(${accentRgb},0.15)` }} />
-                      <StatPill label="Taille max" value={(current as typeof races[0]).height} accent={accent} />
-                      <div className="w-px self-stretch" style={{ background: `rgba(${accentRgb},0.15)` }} />
-                      <StatPill label="Physique" value={(current as typeof races[0]).physique} accent={accent} />
-                    </>
-                  )}
+                  <StatPill label="Longévité" value={current.lifespan} accent={accent} />
+                  <div className="w-px self-stretch" style={{ background: `rgba(${accentRgb},0.15)` }} />
+                  <StatPill label="Taille max" value={current.height} accent={accent} />
+                  <div className="w-px self-stretch" style={{ background: `rgba(${accentRgb},0.15)` }} />
+                  <StatPill label="Physique" value={current.physique} accent={accent} />
                 </div>
 
                 {"note" in current && current.note && (
@@ -629,7 +466,7 @@ export default function RacesEtClassesPage() {
                       transition: "all 0.4s cubic-bezier(0.22,1,0.36,1)",
                       boxShadow: isActive ? `0 8px 28px rgba(${item.accentRgb},0.4)` : "none",
                     }}>
-                    <Image src={`/${tab === "classes" ? "classes" : "races"}/${item.slug}.png`} alt={item.name} fill sizes="90px" className="object-cover" style={{ objectPosition: "center 10%" }} />
+                    <Image src={`/races/${item.slug}.png`} alt={item.name} fill sizes="90px" className="object-cover" style={{ objectPosition: "center 10%" }} />
                     {isActive && (
                       <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom, transparent 45%, rgba(${item.accentRgb},0.4) 100%)` }} />
                     )}
@@ -697,24 +534,18 @@ export default function RacesEtClassesPage() {
 
                 {/* Stats — vertical stack on mobile */}
                 <div
-                  className={`grid ${tab === "classes" ? "grid-cols-2" : "grid-cols-3"} gap-0 rounded-xl mb-4 overflow-hidden`}
+                  className="grid grid-cols-3 gap-0 rounded-xl mb-4 overflow-hidden"
                   style={{
                     background: "rgba(8,14,24,0.7)",
                     border: `1px solid rgba(${accentRgb},0.18)`,
                     backdropFilter: "blur(16px)",
                   }}
                 >
-                  {(tab === "classes"
-                    ? [
-                        { label: "Principale", value: (current as typeof classes[0]).main },
-                        { label: "Secondaire", value: (current as typeof classes[0]).secondary },
-                      ]
-                    : [
-                        { label: "Longévité", value: (current as typeof races[0]).lifespan },
-                        { label: "Taille", value: (current as typeof races[0]).height },
-                        { label: "Physique", value: (current as typeof races[0]).physique },
-                      ]
-                  ).map((stat, idx) => (
+                  {[
+                    { label: "Longévité", value: current.lifespan },
+                    { label: "Taille", value: current.height },
+                    { label: "Physique", value: current.physique },
+                  ].map((stat, idx) => (
                     <div
                       key={stat.label}
                       className="flex flex-col gap-1 px-3 py-3"
@@ -795,7 +626,7 @@ export default function RacesEtClassesPage() {
                         transition: "all 0.35s cubic-bezier(0.22,1,0.36,1)",
                         boxShadow: isActive ? `0 4px 16px rgba(${item.accentRgb},0.4)` : "none",
                       }}>
-                      <Image src={`/${tab === "classes" ? "classes" : "races"}/${item.slug}.png`} alt={item.name} fill sizes="52px" className="object-cover" style={{ objectPosition: "center 10%" }} />
+                      <Image src={`/races/${item.slug}.png`} alt={item.name} fill sizes="52px" className="object-cover" style={{ objectPosition: "center 10%" }} />
                       {isActive && (
                         <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom, transparent 40%, rgba(${item.accentRgb},0.45) 100%)` }} />
                       )}
