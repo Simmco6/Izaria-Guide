@@ -18,14 +18,28 @@ const guilds = [
     type: "Tengoku",
     description: "Mercenaires spécialisés dans l'éradication des démons et des créatures maléfiques. Leur loyauté est aussi noire que leur emblème.",
     icon: "🌹",
-    color: "#0d0d0e",
+    color: "#751e1e",
   },
   {
     name: "Bande des Epines",
-    type: "Guilde de voleurs",
+    type: "Ipulos Tacderen",
     description: "Voleurs, assassins et espions. Ils prospèrent dans l'ombre, utilisant la ruse et la discrétion pour voler les plus grands trésors.",
     icon: "🗡️",
     color: "#9c4faf",
+  },
+  {
+    name: "Croc des Abysses",
+    type: "",
+    description: "Pirates et corsaires des mers inexplorées. Ils rôdent dans les eaux troubles, pillant les navires et terrorisant les côtes.",
+    icon: "🏴‍☠️",
+    color: "#0d0d0e",
+  },
+  {
+    name: "Orbis Arcanum",
+    type: "Arcabios",
+    description: "Explorateurs, chercheurs et érudits. Ils parcourent le monde à la recherche de reliques anciennes et de connaissances perdues.",
+    icon: "🔍",
+    color: "#4ecbdb",
   },
 ]
 
