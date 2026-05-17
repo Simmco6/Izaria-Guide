@@ -7,7 +7,7 @@ const nations = [
     character: "Commercial · Matriarcal · Aride",
     gradient: "linear-gradient(135deg, #2e1f0a 0%, #5c3d14 50%, #2e1f0a 100%)",
     accent: "#FFB84A",
-    href: "https://sites.google.com/view/alakasham/",
+    href: "/nations",
   },
   {
     name: "Asdorath",
@@ -17,7 +17,7 @@ const nations = [
     character: "Puissant · Militaire · Politique",
     gradient: "linear-gradient(135deg, #1a0a0a 0%, #3d1010 50%, #1a0a0a 100%)",
     accent: "#FFB84A",
-    href: "https://sites.google.com/view/asdorath",
+    href: "/nations",
   },
   {
     name: "Arcabios",
@@ -27,7 +27,7 @@ const nations = [
     character: "Erudit · Guerrier · Ordonné",
     gradient: "linear-gradient(135deg, #1a0a0a 0%, #3d1010 50%, #1a0a0a 100%)",
       accent: "#cecccc",
-    href: "https://sites.google.com/view/arcabios",
+    href: "/nations",
   },
   {
     name: "Dakurodo",
