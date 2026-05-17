@@ -123,21 +123,21 @@ const nations: Nation[] = [
   // ── Disparues ─────────────────────────────────────────────────────────────────
   {
     slug: "saltir", name: "Saltir", type: "Sultanat fondateur", population: "Inconnue",
-    description: "Nation fondatrice de la Triple Alliance. Prise en tenaille durant la guerre de 2 ans — ses alliés ne répondirent jamais. Saltir n'existe plus.",
+    description: "Saltir était composée d'un désert qui fut sa plus grande force, mais c'est aussi ce qui créa sa chute. Nation fondatrice de la Triple Alliance, elle fut prospère et son climat chaud fut un avantage, et cela est encore vrai aujourd'hui bien que la nation soit tombée après avoir été prise en tenaille durant la guerre de 2 ans. Entre le soulèvement de ses cavaliers du désert et l'attaque d'Hokkaido sur les côtes, elle appela désespérément ses alliés qui ne furent d'aucune aide. Cette nation n'existe plus aujourd'hui.",
     character: "Fondatrice · Désertique · Abandonnée", accent: "#8B6914", glow: "rgba(139,105,20,0.12)",
     nationHref: "#", leaderHref: "#", status: "destroyed",
     army: { name: "— Dissoute —", total: "Nation disparue", description: "L'armée de Saltir fut décimée et dispersée. Ses chefs de guerre furent tués ou capturés. La nation fut abandonnée par ses alliés et laissée à l'abandon." , units: [{ name: "Cavaliers du Désert", count: "†", role: "Anéantis lors de la prise de Saltir" }, { name: "Mercenaires de la Lame", count: "†", role: "Dissous, certains capturés, d'autres tués" }, { name: "Arbalétriers de Sable", count: "†", role: "Décimés, incapables de défendre les caravanes" }] },
   },
   {
     slug: "toundra", name: "Toundra", type: "Grande nation", population: "Inconnue",
-    description: "Grande perdante de la guerre de 2 ans. Sa capitale Draguiroux fut pratiquement rasée. Ses dirigeants sont morts ou au service des nouvelles nations. Toundra n'existe plus.",
+    description: "Toundra a un climat plutôt stable ; à vrai dire, il est composé de températures généralement comprises entre 5 et 25 degrés. On y remarque une forte présence forestière, des montagnes et un marais. Grande perdante de la guerre de 2 ans, cette grande nation ne vit pas venir l'attaque d'Hokkaido. Son insouciance créa sa perte. Sa capitale, Draguiroux, fut pratiquement rasée, et ses hauts dirigeants sont soit morts soit au service des nouvelles nations. Cette nation n'existe plus aujourd'hui.",
     character: "Insouciante · Forestière · Rasée", accent: "#5a7a5a", glow: "rgba(90,122,90,0.12)",
     nationHref: "#", leaderHref: "#", status: "destroyed",
     army: { name: "— Dissoute —", total: "Nation disparue", description: "L'armée de Toundra fut surprise et anéantie. Draguiroux rasée. Ses chefs de guerre sont morts ou sous joug étranger.", units: [{ name: "Défenseurs de Draguiroux", count: "†", role: "Écrasés lors de la prise de la capitale" }, { name: "Milice Forestière", count: "†", role: "Dispersée, incapable d'organiser une résistance" }] },
   },
   {
     slug: "azandor", name: "Azandor", type: "Royaume anéanti", population: "Inconnue",
-    description: "Uzall envoya un assassin tuer l'Impératrice Narset. L'assassin fut arrêté. Narset marcha sur la capitale, décapita Uzall de sa propre main et fit brûler la ville entièrement. Azandor n'existe plus.",
+    description: "Le royaume d'Azandor était le fruit des ambitions de Saan Uzall. Mais cette nation était déchirée par des troubles internes entre ses murs. Pris de folie et d'une jalousie absolue, Uzall envoya un assassin tuer l'Impératrice voisine, Régina de Narset d'Asdorath. Cet assassin a été arrêté juste après son arrivée dans le château. Narset décida alors de marcher sur la capitale avec ses cavaliers et décapita elle-même Saan Uzall ainsi que tous ses dignitaires avant de brûler entièrement la ville. Cette nation n'existe plus aujourd'hui.",
     character: "Ambitieux · Instable · Brûlé", accent: "#8B2020", glow: "rgba(139,32,32,0.12)",
     nationHref: "#", leaderHref: "#", status: "destroyed",
     army: { name: "— Anéantie —", total: "Nation disparue", description: "L'armée capitula sans combattre. Uzall et ses dignitaires furent décapités. La ville brûlée jusqu'aux fondations.", units: [{ name: "Garde de Saan Uzall", count: "†", role: "Décapitée avec leur maître par Narset" }, { name: "Armée Royale", count: "†", role: "Rendue ou dissoute lors de l'invasion d'Asdorath" }] },
