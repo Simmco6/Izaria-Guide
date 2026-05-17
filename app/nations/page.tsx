@@ -66,7 +66,7 @@ const nations: Nation[] = [
   {
     slug: "ipulos-tacderen", name: "Ipulos Tacderen", type: "Royaume du fer", population: "20 000 habitants",
     description: "La nation du fer, lieu où tous les rêves, tant qu'ils contiennent des métaux, se voient réalisés. Gardant quelques séquelles de la guerre dont elle a été victime, son symbole, l'éclipse, représente l'émergence de cet empire, à l'instar du soleil qui se dégage de l'ombre que lui fait la lune. Mais d'autres y voient le regard impitoyable de la famille souveraine, les Mélisande, qui surveillent d'un œil avide leur trésor. La tour, refuge des défunts de la Grande guerre, surplombe et veille sur la ville et le moindre de ses habitants. Ici, il n'y a pas de loi écrite, les habitants ont toujours raison, les étrangers se doivent de payer un impôt pour obtenir le droit de passage. Les Tacderiens sont connus pour leur maîtrise du fer et sont fascinés par le pouvoir qu'exerce l'électricité sur ce dernier. Ils s'en servent même pour le travailler; les armes et armures forgées par la foudre sont un savoir qu'eux seuls maîtrisent et qui vaut, par la même occasion, leur réputation.",
-    character: "Voleur · Forgeron · Menaçant", accent: "#a0a09e", glow: "rgba(160,160,158,0.12)",
+    character: "Voleuse · Forgeron · Menaçant", accent: "#a0a09e", glow: "rgba(160,160,158,0.12)",
     nationHref: "#", leaderHref: "#", status: "active",
     army: { name: "Forge-Guerre", total: "~2 800 soldats", description: "Les meilleurs équipements du monde au service d'une armée réduite mais redoutablement armée.", units: [{ name: "Forgerons-Soldats", count: "500", role: "Artisans de guerre, réparation et fabrication en campagne" }, { name: "Chevaliers de Fer", count: "800", role: "Cavalerie lourde en armure intégrale forgée sur mesure" }, { name: "Pillards Mécanisés", count: "1 500", role: "Infanterie équipée d'armes expérimentales" }] },
   },
@@ -100,45 +100,45 @@ const nations: Nation[] = [
   },
   // ── Inconnues ─────────────────────────────────────────────────────────────────
   {
-    slug: "territoire-libre", name: "Territoire Libre", type: "??? — à définir", population: "???",
+    slug: "territoire-libre", name: "Territoire Libre", type: "Forêt majestueuse", population: "Inconnue",
     description: "Les informations sur cette nation sont encore en cours de rédaction. Revenez bientôt.",
-    character: "??? · ??? · ???", accent: "#8888aa", glow: "rgba(136,136,170,0.10)",
+    character: "Inconnu", accent: "#24a039", glow: "rgba(136,136,170,0.10)",
     nationHref: "#", leaderHref: "#", status: "pending",
     army: { name: "??? — à définir", total: "???", description: "Les données militaires n'ont pas encore été renseignées.", units: [{ name: "À découvrir", count: "???", role: "Informations à venir" }] },
   },
   {
-    slug: "zone-ombre", name: "Zone d'Ombre", type: "??? — à définir", population: "???",
+    slug: "zone-ombre", name: "Zone d'Ombre", type: "Terres de brouillard", population: "Inconnue",
     description: "Les informations sur cette région sont encore en cours de rédaction. Revenez bientôt.",
-    character: "??? · ??? · ???", accent: "#8888aa", glow: "rgba(136,136,170,0.10)",
+    character: "Inconnu", accent: "#8888aa", glow: "rgba(136,136,170,0.10)",
     nationHref: "#", leaderHref: "#", status: "pending",
     army: { name: "??? — à définir", total: "???", description: "Les données militaires n'ont pas encore été renseignées.", units: [{ name: "À découvrir", count: "???", role: "Informations à venir" }] },
   },
   {
-    slug: "terres-desolees", name: "Terres Désolées", type: "??? — à définir", population: "???",
+    slug: "terres-desolees", name: "Terres Désolées", type: "Ile abandonnée", population: "Inconnue",
     description: "Les informations sur cette région sont encore en cours de rédaction. Revenez bientôt.",
-    character: "??? · ??? · ???", accent: "#8888aa", glow: "rgba(136,136,170,0.10)",
+    character: "Inconnu", accent: "#309eac", glow: "rgba(136,136,170,0.10)",
     nationHref: "#", leaderHref: "#", status: "pending",
     army: { name: "??? — à définir", total: "???", description: "Les données militaires n'ont pas encore été renseignées.", units: [{ name: "À découvrir", count: "???", role: "Informations à venir" }] },
   },
   // ── Disparues ─────────────────────────────────────────────────────────────────
   {
-    slug: "saltir", name: "Saltir", type: "Sultanat fondateur", population: "Inconnue",
+    slug: "saltir", name: "Saltir", type: "Sultanat fondateur", population: "150 000 habitants",
     description: "Saltir était composée d'un désert qui fut sa plus grande force, mais c'est aussi ce qui créa sa chute. Nation fondatrice de la Triple Alliance, elle fut prospère et son climat chaud fut un avantage, et cela est encore vrai aujourd'hui bien que la nation soit tombée après avoir été prise en tenaille durant la guerre de 2 ans. Entre le soulèvement de ses cavaliers du désert et l'attaque d'Hokkaido sur les côtes, elle appela désespérément ses alliés qui ne furent d'aucune aide. Cette nation n'existe plus aujourd'hui.",
-    character: "Fondatrice · Désertique · Abandonnée", accent: "#8B6914", glow: "rgba(139,105,20,0.12)",
+    character: "Commerciale · Désertique · Abandonnée", accent: "#8B6914", glow: "rgba(139,105,20,0.12)",
     nationHref: "#", leaderHref: "#", status: "destroyed",
     army: { name: "— Dissoute —", total: "Nation disparue", description: "L'armée de Saltir fut décimée et dispersée. Ses chefs de guerre furent tués ou capturés. La nation fut abandonnée par ses alliés et laissée à l'abandon." , units: [{ name: "Cavaliers du Désert", count: "†", role: "Anéantis lors de la prise de Saltir" }, { name: "Mercenaires de la Lame", count: "†", role: "Dissous, certains capturés, d'autres tués" }, { name: "Arbalétriers de Sable", count: "†", role: "Décimés, incapables de défendre les caravanes" }] },
   },
   {
-    slug: "toundra", name: "Toundra", type: "Grande nation", population: "Inconnue",
+    slug: "toundra", name: "Toundra", type: "Grande nation", population: "100 000 habitants",
     description: "Toundra a un climat plutôt stable ; à vrai dire, il est composé de températures généralement comprises entre 5 et 25 degrés. On y remarque une forte présence forestière, des montagnes et un marais. Grande perdante de la guerre de 2 ans, cette grande nation ne vit pas venir l'attaque d'Hokkaido. Son insouciance créa sa perte. Sa capitale, Draguiroux, fut pratiquement rasée, et ses hauts dirigeants sont soit morts soit au service des nouvelles nations. Cette nation n'existe plus aujourd'hui.",
-    character: "Insouciante · Forestière · Rasée", accent: "#5a7a5a", glow: "rgba(90,122,90,0.12)",
+    character: "Insouciante · Forestière · Tyranique", accent: "#5a7a5a", glow: "rgba(90,122,90,0.12)",
     nationHref: "#", leaderHref: "#", status: "destroyed",
     army: { name: "— Dissoute —", total: "Nation disparue", description: "L'armée de Toundra fut surprise et anéantie. Draguiroux rasée. Ses chefs de guerre sont morts ou sous joug étranger.", units: [{ name: "Défenseurs de Draguiroux", count: "†", role: "Écrasés lors de la prise de la capitale" }, { name: "Milice Forestière", count: "†", role: "Dispersée, incapable d'organiser une résistance" }] },
   },
   {
-    slug: "azandor", name: "Azandor", type: "Royaume anéanti", population: "Inconnue",
+    slug: "azandor", name: "Azandor", type: "Royaume anéanti", population: "30 000 habitants",
     description: "Le royaume d'Azandor était le fruit des ambitions de Saan Uzall. Mais cette nation était déchirée par des troubles internes entre ses murs. Pris de folie et d'une jalousie absolue, Uzall envoya un assassin tuer l'Impératrice voisine, Régina de Narset d'Asdorath. Cet assassin a été arrêté juste après son arrivée dans le château. Narset décida alors de marcher sur la capitale avec ses cavaliers et décapita elle-même Saan Uzall ainsi que tous ses dignitaires avant de brûler entièrement la ville. Cette nation n'existe plus aujourd'hui.",
-    character: "Ambitieux · Instable · Brûlé", accent: "#8B2020", glow: "rgba(139,32,32,0.12)",
+    character: "Ambitieux · Instable · Démoniaque", accent: "#8B2020", glow: "rgba(139,32,32,0.12)",
     nationHref: "#", leaderHref: "#", status: "destroyed",
     army: { name: "— Anéantie —", total: "Nation disparue", description: "L'armée capitula sans combattre. Uzall et ses dignitaires furent décapités. La ville brûlée jusqu'aux fondations.", units: [{ name: "Garde de Saan Uzall", count: "†", role: "Décapitée avec leur maître par Narset" }, { name: "Armée Royale", count: "†", role: "Rendue ou dissoute lors de l'invasion d'Asdorath" }] },
   },
@@ -285,7 +285,8 @@ function NationDetail({ nation }: { nation: Nation }) {
             <div className="flex-1" />
             <div className="h-px mb-5" style={{ background: `linear-gradient(to right, ${nation.accent}35, transparent)` }} />
 
-            {!isDestroyed ? (
+            {/* Boutons fiche — uniquement pour les nations actives */}
+            {!isDestroyed && !isPending && (
               <div className="flex flex-col gap-2 mb-4">
                 <a href={nation.nationHref} target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 font-cinzel text-xs tracking-wider uppercase px-4 py-2.5 rounded-lg border transition-all duration-200 hover:brightness-95"
@@ -304,97 +305,104 @@ function NationDetail({ nation }: { nation: Nation }) {
                   Fiche de dirigeant
                 </a>
               </div>
-            ) : (
+            )}
+
+            {/* Bandeau archives — uniquement pour les nations disparues */}
+            {isDestroyed && (
               <div className="rounded-lg px-4 py-3 border-l-2 mb-4" style={{ background: `${nation.accent}08`, borderColor: nation.accent }}>
                 <p className="font-cinzel text-[10px] tracking-[0.2em] uppercase mb-1" style={{ color: nation.accent }}>☠ Archives historiques</p>
                 <p className="font-jost text-xs text-[#4A5568] leading-relaxed">Cette nation n'existe plus. Son histoire est conservée à titre d'archives pour le lore d'Izaria.</p>
               </div>
             )}
 
-            {/* Bouton armée — ouvre la carte en dessous */}
-            <button
-              onClick={() => setArmyOpen(o => !o)}
-              className="flex items-center justify-between w-full font-cinzel text-xs tracking-wider uppercase px-4 py-2.5 rounded-lg border transition-all duration-200"
-              style={{
-                borderColor: armyOpen ? `${nation.accent}60` : "#E5E1D8",
-                color: armyOpen ? nation.accent : "#4A5568",
-                background: armyOpen ? `${nation.accent}0d` : "transparent",
-              }}
-            >
-              <span className="flex items-center gap-2">
-                <svg className="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
-                </svg>
-                {isDestroyed ? "Archives militaires" : "Forces militaires"}
-              </span>
-              <svg
-                className="w-3 h-3 shrink-0 transition-transform duration-300"
-                style={{ transform: armyOpen ? "rotate(180deg)" : "rotate(0deg)" }}
-                fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"
+            {/* Bouton armée — uniquement pour les nations actives */}
+            {!isPending && !isDestroyed && (
+              <button
+                onClick={() => setArmyOpen(o => !o)}
+                className="flex items-center justify-between w-full font-cinzel text-xs tracking-wider uppercase px-4 py-2.5 rounded-lg border transition-all duration-200"
+                style={{
+                  borderColor: armyOpen ? `${nation.accent}60` : "#E5E1D8",
+                  color: armyOpen ? nation.accent : "#4A5568",
+                  background: armyOpen ? `${nation.accent}0d` : "transparent",
+                }}
               >
-                <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Carte armée — apparaît en dessous avec animation ── */}
-      <div
-        className="overflow-hidden transition-all duration-500 ease-in-out"
-        style={{
-          maxHeight: armyOpen ? "800px" : "0px",
-          opacity: armyOpen ? 1 : 0,
-          transform: armyOpen ? "translateY(0)" : "translateY(-8px)",
-        }}
-      >
-        <div
-          className="rounded-xl border bg-white overflow-hidden"
-          style={{ borderColor: `${nation.accent}44`, boxShadow: `0 4px 20px ${nation.glow}` }}
-        >
-          {/* Header de la carte armée */}
-          <div
-            className="px-7 py-4 border-b flex items-center justify-between"
-            style={{ borderColor: `${nation.accent}20`, background: `${nation.accent}06` }}
-          >
-            <div>
-              <p className="font-cinzel font-bold text-[#1A1A2E] text-sm">{nation.army.name}</p>
-              <p className="font-jost text-xs mt-0.5" style={{ color: nation.accent }}>{nation.army.total}</p>
-            </div>
-            <span
-              className="font-cinzel text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full border"
-              style={{ borderColor: `${nation.accent}30`, color: nation.accent, background: `${nation.accent}10` }}
-            >
-              {isDestroyed ? "Archives" : "Forces militaires"}
-            </span>
-          </div>
-
-          {/* Corps de la carte armée */}
-          <div className="p-7">
-            <p className="font-jost text-sm text-[#4A5568] leading-relaxed mb-5">
-              {nation.army.description}
-            </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {nation.army.units.map((unit) => (
-                <div
-                  key={unit.name}
-                  className="rounded-xl border p-4"
-                  style={{ borderColor: `${nation.accent}20`, background: `${nation.accent}05` }}
+                <span className="flex items-center gap-2">
+                  <svg className="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+                  </svg>
+                  Forces militaires
+                </span>
+                <svg
+                  className="w-3 h-3 shrink-0 transition-transform duration-300"
+                  style={{ transform: armyOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+                  fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"
                 >
-                  <p
-                    className="font-cinzel font-bold text-lg mb-1 leading-none"
-                    style={{ color: nation.accent }}
-                  >
-                    {unit.count}
-                  </p>
-                  <p className="font-cinzel text-[#1A1A2E] text-xs font-bold mb-1">{unit.name}</p>
-                  <p className="font-jost text-[11px] text-[#4A5568] leading-snug">{unit.role}</p>
-                </div>
-              ))}
-            </div>
+                  <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            )}
           </div>
         </div>
       </div>
+
+      {/* ── Carte armée — apparaît en dessous avec animation (nations actives uniquement) ── */}
+      {!isPending && !isDestroyed && (
+        <div
+          className="overflow-hidden transition-all duration-500 ease-in-out"
+          style={{
+            maxHeight: armyOpen ? "800px" : "0px",
+            opacity: armyOpen ? 1 : 0,
+            transform: armyOpen ? "translateY(0)" : "translateY(-8px)",
+          }}
+        >
+          <div
+            className="rounded-xl border bg-white overflow-hidden"
+            style={{ borderColor: `${nation.accent}44`, boxShadow: `0 4px 20px ${nation.glow}` }}
+          >
+            {/* Header de la carte armée */}
+            <div
+              className="px-7 py-4 border-b flex items-center justify-between"
+              style={{ borderColor: `${nation.accent}20`, background: `${nation.accent}06` }}
+            >
+              <div>
+                <p className="font-cinzel font-bold text-[#1A1A2E] text-sm">{nation.army.name}</p>
+                <p className="font-jost text-xs mt-0.5" style={{ color: nation.accent }}>{nation.army.total}</p>
+              </div>
+              <span
+                className="font-cinzel text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full border"
+                style={{ borderColor: `${nation.accent}30`, color: nation.accent, background: `${nation.accent}10` }}
+              >
+                Forces militaires
+              </span>
+            </div>
+
+            {/* Corps de la carte armée */}
+            <div className="p-7">
+              <p className="font-jost text-sm text-[#4A5568] leading-relaxed mb-5">
+                {nation.army.description}
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {nation.army.units.map((unit) => (
+                  <div
+                    key={unit.name}
+                    className="rounded-xl border p-4"
+                    style={{ borderColor: `${nation.accent}20`, background: `${nation.accent}05` }}
+                  >
+                    <p
+                      className="font-cinzel font-bold text-lg mb-1 leading-none"
+                      style={{ color: nation.accent }}
+                    >
+                      {unit.count}
+                    </p>
+                    <p className="font-cinzel text-[#1A1A2E] text-xs font-bold mb-1">{unit.name}</p>
+                    <p className="font-jost text-[11px] text-[#4A5568] leading-snug">{unit.role}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   )
