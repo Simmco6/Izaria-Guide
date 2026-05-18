@@ -1,7 +1,6 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from "react"
-import { useSearchParams } from "next/navigation"
+import React, { useState } from "react"
 import Image from "next/image"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
@@ -127,7 +126,7 @@ const nations: Nation[] = [
     description: "Saltir était composée d'un désert qui fut sa plus grande force, mais c'est aussi ce qui créa sa chute. Nation fondatrice de la Triple Alliance, elle fut prospère et son climat chaud fut un avantage, et cela est encore vrai aujourd'hui bien que la nation soit tombée après avoir été prise en tenaille durant la guerre de 2 ans. Entre le soulèvement de ses cavaliers du désert et l'attaque d'Hokkaido sur les côtes, elle appela désespérément ses alliés qui ne furent d'aucune aide. Cette nation n'existe plus aujourd'hui.",
     character: "Commerciale · Désertique · Abandonnée", accent: "#8B6914", glow: "rgba(139,105,20,0.12)",
     nationHref: "#", leaderHref: "#", status: "destroyed",
-    army: { name: "— Dissoute —", total: "Nation disparue", description: "L'armée de Saltir fut décimée et dispersée. Ses chefs de guerre furent tués ou capturés. La nation fut abandonnée par ses alliés et laissée à l'abandon.", units: [{ name: "Cavaliers du Désert", count: "†", role: "Anéantis lors de la prise de Saltir" }, { name: "Mercenaires de la Lame", count: "†", role: "Dissous, certains capturés, d'autres tués" }, { name: "Arbalétriers de Sable", count: "†", role: "Décimés, incapables de défendre les caravanes" }] },
+    army: { name: "— Dissoute —", total: "Nation disparue", description: "L'armée de Saltir fut décimée et dispersée. Ses chefs de guerre furent tués ou capturés. La nation fut abandonnée par ses alliés et laissée à l'abandon." , units: [{ name: "Cavaliers du Désert", count: "†", role: "Anéantis lors de la prise de Saltir" }, { name: "Mercenaires de la Lame", count: "†", role: "Dissous, certains capturés, d'autres tués" }, { name: "Arbalétriers de Sable", count: "†", role: "Décimés, incapables de défendre les caravanes" }] },
   },
   {
     slug: "toundra", name: "Toundra", type: "Grande nation", population: "100 000 habitants",
@@ -360,6 +359,7 @@ function NationDetail({ nation }: { nation: Nation }) {
             className="rounded-xl border bg-white overflow-hidden"
             style={{ borderColor: `${nation.accent}44`, boxShadow: `0 4px 20px ${nation.glow}` }}
           >
+            {/* Header de la carte armée */}
             <div
               className="px-7 py-4 border-b flex items-center justify-between"
               style={{ borderColor: `${nation.accent}20`, background: `${nation.accent}06` }}
@@ -375,6 +375,8 @@ function NationDetail({ nation }: { nation: Nation }) {
                 Forces militaires
               </span>
             </div>
+
+            {/* Corps de la carte armée */}
             <div className="p-7">
               <p className="font-jost text-sm text-[#4A5568] leading-relaxed mb-5">
                 {nation.army.description}
@@ -386,7 +388,10 @@ function NationDetail({ nation }: { nation: Nation }) {
                     className="rounded-xl border p-4"
                     style={{ borderColor: `${nation.accent}20`, background: `${nation.accent}05` }}
                   >
-                    <p className="font-cinzel font-bold text-lg mb-1 leading-none" style={{ color: nation.accent }}>
+                    <p
+                      className="font-cinzel font-bold text-lg mb-1 leading-none"
+                      style={{ color: nation.accent }}
+                    >
                       {unit.count}
                     </p>
                     <p className="font-cinzel text-[#1A1A2E] text-xs font-bold mb-1">{unit.name}</p>
@@ -408,24 +413,9 @@ function NationDetail({ nation }: { nation: Nation }) {
 export default function NationsPage() {
   const [selected, setSelected] = useState<string>(nations[0].slug)
   const nation = nations.find((n) => n.slug === selected)!
-  const searchParams = useSearchParams()
-  const detailRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const param = searchParams.get("nation")
-    if (param && nations.find((n) => n.slug === param)) {
-      setSelected(param)
-      setTimeout(() => {
-        if (detailRef.current) {
-        const top = detailRef.current.getBoundingClientRect().top + window.scrollY - 100
-        window.scrollTo({ top, behavior: "smooth" })
-        }
-      }, 300)
-    }
-  }, [searchParams])
-
-  const activeNations    = nations.filter(n => n.status === "active")
-  const pendingNations   = nations.filter(n => n.status === "pending")
+  const activeNations   = nations.filter(n => n.status === "active")
+  const pendingNations  = nations.filter(n => n.status === "pending")
   const destroyedNations = nations.filter(n => n.status === "destroyed")
 
   return (
@@ -492,10 +482,7 @@ export default function NationsPage() {
               </div>
             </div>
 
-            {/* ── Nation Detail ── */}
-            <div ref={detailRef}>
-              <NationDetail nation={nation} />
-            </div>
+            <NationDetail nation={nation} />
 
           </div>
         </section>

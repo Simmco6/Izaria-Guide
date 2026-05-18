@@ -154,12 +154,21 @@ const ERAS: Era[] = [
       },
       {
         year: "An 9510",
+        short: "Expédition",
+        major: true,
+        badge: "Expédition",
+        title: "Expédition de la zone d'Ombre",
+        sub: "An 9510 — Les explorateurs découvrent le monde",
+        text: "Les explorateurs d'Asdorath mènent une expédition au delà de la Zone d'Ombre, révélant 3 nations oubliées : Mitsurin, royaume de la jungle ; Dakurodo, royaume démoniaque ; Tengoku, royaume des iles flottantes. Ces nations sont rapidement connues mondialement et des axes commerciaux se créent.",
+      },
+      {
+        year: "An 9510",
         short: "Clemar",
         major: false,
         badge: "Conquête",
         title: "Annexion de la Tour de Clemar",
         sub: "An 9510 — Dakurodo s'étend",
-        text: "Dakurodo annexe la Tour de Clemar. Asdorath voit en Tengoku, havre mystérieux sur des îles flottantes, un allié pour repousser les troupes ennemies.",
+        text: "Suite à l'expédition de la zone d'Ombre, Dakurodo annexe la Tour de Clemar prenant cette dernière comme une déclaration de guerre. Asdorath voit alors en Tengoku, ce havre mystérieux, un allié pour repousser les troupes ennemies. En effet, cette petite nation lutte contre Dakurodo depuis des siècles.",
       },
       {
         year: "An 9511",

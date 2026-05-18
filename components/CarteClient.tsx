@@ -8,7 +8,7 @@ const nations = [
   {
     id: "mitsurin",
     name: "Mitsurin",
-    href: "/nations/mitsurin",
+    href: "/nations?nation=mitsurin",
     color: "#27AE60",
     points: [
       [17.2,17.2],[12.2,26.1],[15.1,34.1],[22.0,45.6],[18.4,55.8],
@@ -20,7 +20,7 @@ const nations = [
   {
     id: "dakurodo",
     name: "Dakurodo",
-    href: "/nations/dakurodo",
+    href: "/nations?nation=dakurodo",
     color: "#34253a",
     points: [
       [56.2,33.6],[63.1,29.2],[62.3,24.4],[67.9,18.7],[75.1,17.5],
@@ -33,7 +33,7 @@ const nations = [
   {
     id: "tengoku",
     name: "Tengoku",
-    href: "/nations/tengoku",
+    href: "/nations?nation=tengoku",
     color: "#d9d9da",
     points: [
       [73.0,36.9],[73.6,41.0],[76.9,41.7],[82.2,44.3],[87.8,45.0],
@@ -43,7 +43,7 @@ const nations = [
   {
     id: "zone-ombre",
     name: "Zone d'Ombre",
-    href: "/nations/zone-ombre",
+    href: "/nations?nation=zone-ombre",
     color: "#6b7280",
     points: [
       [31.8,56.9],[25.8,62.3],[19.1,64.3],[18.8,73.2],[20.1,81.0],
@@ -56,7 +56,7 @@ const nations = [
   {
     id: "alakasham",
     name: "Alakasham",
-    href: "/nations/alakasham",
+    href: "/nations?nation=alakasham",
     color: "#FFB84A",
     points: [
       [20.1,80.3],[23.9,89.0],[27.6,87.5],[39.6,89.7],[43.6,92.7],
@@ -66,7 +66,7 @@ const nations = [
   {
     id: "thogdur",
     name: "Thogdur",
-    href: "/nations/thogdur",
+    href: "/nations?nation=thogdur",
     color: "#44a053",
     points: [
       [14.1,87.7],[23.3,89.2],[27.6,88.0],[39.6,90.1],[43.2,92.7],
@@ -77,7 +77,7 @@ const nations = [
   {
     id: "hokkaido",
     name: "Hokkaido",
-    href: "/nations/hokkaido",
+    href: "/nations?nation=hokkaido",
     color: "#9430ad",
     points: [
       [24.4,112.4],[21.5,120.5],[16.0,120.8],[3.7,113.0],[0.6,106.4],
@@ -88,7 +88,7 @@ const nations = [
   {
     id: "ipulos-tacderen",
     name: "Ipulos Tacderen",
-    href: "/nations/ipulos-tacderen",
+    href: "/nations?nation=ipulos-tacderen",
     color: "#74716d",
     points: [
       [32.0,108.7],[35.5,110.9],[39.1,110.9],[39.6,113.0],[42.4,115.7],
@@ -102,7 +102,7 @@ const nations = [
   {
     id: "arcabios",
     name: "Arcabios",
-    href: "/nations/arcabios",
+    href: "/nations?nation=arcabios",
     color: "#9e2828",
     points: [
       [42.6,115.4],[55.3,115.4],[61.3,119.5],[67.1,119.8],[70.8,124.7],
@@ -113,7 +113,7 @@ const nations = [
   {
     id: "asdorath",
     name: "Asdorath",
-    href: "/nations/asdorath",
+    href: "/nations?nation=asdorath",
     color: "#ec9615",
     points: [
       [76.9,92.7],[56.2,93.6],[52.9,96.8],[53.4,102.9],[55.2,107.5],
@@ -124,7 +124,7 @@ const nations = [
   {
     id: "solarsen",
     name: "Solarsen",
-    href: "/nations/solarsen",
+    href: "/nations?nation=solarsen",
     color: "#4AC8FF",
     points: [
       [83.5,121.1],[86.1,116.5],[95.0,119.9],[92.7,126.0],[94.1,130.0],
@@ -389,36 +389,8 @@ export default function CarteClient() {
                 </div>
               </div>
             </div>
-
-            {/* ── Grille nations ── */}
-            <div className="reveal reveal-delay-2">
-              <p className="eyebrow text-[#C9974A] mb-5">Explorer les nations</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                {nations.map((nation, i) => (
-                  <Link
-                    key={nation.id}
-                    href={nation.href}
-                    className={`reveal reveal-delay-${Math.min((i % 4) + 1, 6)} group relative bg-white rounded-lg px-4 py-3 border border-[#D4C5A9]/50 hover:border-transparent hover:shadow-md transition-all duration-200 flex items-center gap-2.5 no-underline`}
-                  >
-                    <div
-                      className="absolute left-0 top-3 bottom-3 w-[3px] rounded-r-full"
-                      style={{ background: nation.color }}
-                    />
-                    <span
-                      className="w-2.5 h-2.5 rounded-full flex-shrink-0"
-                      style={{ background: nation.color }}
-                    />
-                    <span className="font-jost text-sm font-medium text-[#1A1A2E] group-hover:text-[#C9974A] transition-colors">
-                      {nation.name}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
           </div>
         </section>
-
       </main>
 
       <style jsx global>{`
